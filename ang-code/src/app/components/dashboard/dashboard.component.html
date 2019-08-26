@@ -1,0 +1,18 @@
+<h1 style="color:lightseagreen">Dashboard</h1>
+<hr width="40%" align="left" size="5">
+<p>Hi {{user.name}}! Welcome to your dashboard!</p>
+<div style="margin-top:4rem" class="container">
+  <flash-messages></flash-messages>
+  <div class="row">
+    <div class="col-md-4" id="border-notes">
+      <app-notes></app-notes>
+    </div>
+    <div class="col-md-4" id="border-todo">
+      <app-header></app-header>
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-md-3 ml-auto" id="border-tab">
+      <app-calendar></app-calendar>
+    </div>
+  </div>
+</div>
