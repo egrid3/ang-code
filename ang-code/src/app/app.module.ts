@@ -35,7 +35,8 @@ const appRoutes: Routes = [
     children: [
       {path: '', redirectTo: 'todos', pathMatch: 'full'},
       {path: 'todos', component: TodosComponent },
-      {path: 'todoabout', component: AboutTodoComponent}
+      {path: 'todoabout', component: AboutTodoComponent},
+      {path: 'notes', component: NotesComponent, outlet: 'mynotes', canActivate: [AuthGuard]}
     ]
   },
   {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]}

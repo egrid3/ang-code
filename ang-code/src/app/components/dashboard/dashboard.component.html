@@ -5,9 +5,13 @@
   <flash-messages></flash-messages>
   <div class="row">
     <div class="col-md-4" id="border-notes">
-      <app-notes></app-notes>
+      <router-outlet name="mynotes"></router-outlet>
     </div>
     <div class="col-md-4" id="border-todo">
+      <span>
+        <a [routerLink]="[{outlets: {mynotes:'notes'}}]">[<--N] - </a>
+        <a [routerLink]="[{outlets: {mynotes:null}}]">[N-->]</a>
+      </span>
       <app-header></app-header>
       <router-outlet></router-outlet>
     </div>
