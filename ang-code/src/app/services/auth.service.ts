@@ -13,38 +13,38 @@ export class AuthService {
 
   constructor(private httpClient: HttpClient) { }
 
-  registerUser(user){
-    let headers = new HttpHeaders();
-    headers.append('Content-Type','application/json');
+  registerUser(user) {
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
     return this.httpClient.post('http://localhost:3034/users/register', user, {headers:headers});
   }
   authenticateUser(user) {
-    let headers = new HttpHeaders();
+    const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
     return this.httpClient.post('http://localhost:3034/users/authenticate', user, {headers:headers});
   }
-  getProfile(){
+  getProfile() {
     this.loadToken();
-    let headers = new HttpHeaders({
-    'Authorization': this.authToken,
+    const headers = new HttpHeaders({
+    Authorization: this.authToken,
     'Content-Type': 'application/json'
   });
     return this.httpClient.get('http://localhost:3034/users/profile', {headers:headers});
   }
-  storeUserData(token, user){
+  storeUserData(token, user) {
     localStorage.setItem('id_token', token);
     localStorage.setItem('user', JSON.stringify(user));
     this.authToken = token;
     this.user = user;
   }
-  loadToken(){
+  loadToken() {
     const token = localStorage.getItem('id_token');
     this.authToken = token;
   }
-  loggedIn(){
+  loggedIn() {
     return tokenNotExpired('id_token');
   }
-  logout(){
+  logout() {
     this.authToken = null;
     this.user = null;
     localStorage.clear();

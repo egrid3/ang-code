@@ -5,9 +5,9 @@
 <div class="container">
   <div style="margin-top:4rem" class="jumbotron text-center">
     <h1>MEAN Stack Todo App</h1>
-    <p class="lead">Welcome to the todo application with authentication built from scratch. I plan to add and modify as I go to create a fully funtional app.</p>
+    <p class="lead">Welcome to my todo/productivity application with authentication built from merging a couple of tutorials and some enhancement. I plan to add and modify as I go to create a fully funtional app.</p>
     <div>
-      <a class="btn btn-primary" [routerLink]="['/register']">Register</a><span>_</span> <a class="btn btn-dark" [routerLink]="['/login']">Login</a>
+      <a class="btn btn-primary" [routerLink]="['/register']">Register</a><a class="btn btn-dark" [routerLink]="['/login']">Login</a>
     </div>
   </div>
 
@@ -24,5 +24,8 @@
       <h3>JWT Tokens</h3>
       <p>Full featured authentication using JSON web tokens. Login and store user data.</p>
     </div>
+  </div><br><br>
+  <div class="alert alert-secondary">
+    <p><strong>The login info is all stored on the same level. Meaning the Profile page and the Dashboard message are the only distinguishable parts in relation to the login. The todos are taken from http://jsonplaceholder.typicode.com/. This will be changed when I setup the database to store the todos.</strong></p>
   </div>
 </div>

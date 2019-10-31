@@ -1,21 +1,19 @@
-<h1 style="color:lightseagreen">Dashboard</h1>
-<hr width="40%" align="left" size="5">
-<p>Hi {{user.name}}! Welcome to your dashboard!</p>
-<div style="margin-top:4rem" class="container">
+<div class="dash-container">
   <flash-messages></flash-messages>
+  <h1 style="color:lightseagreen">Dashboard</h1>
+  <hr width="40%" align="left" size="5">
+  <p>Hi {{user.name}}! Welcome to your dashboard!</p>
+</div>
+<div style="margin-top:4rem" class="dash-container">
   <div class="row">
-    <div class="col-md-4" id="border-notes">
+    <div class="col-md-4">
       <router-outlet name="mynotes"></router-outlet>
     </div>
     <div class="col-md-4" id="border-todo">
-      <span>
-        <a [routerLink]="[{outlets: {mynotes:'notes'}}]">[<--N] - </a>
-        <a [routerLink]="[{outlets: {mynotes:null}}]">[N-->]</a>
-      </span>
       <app-header></app-header>
       <router-outlet></router-outlet>
     </div>
-    <div class="col-md-3 ml-auto" id="border-tab">
+    <div class="col-md-4 ml-auto" id="border-tab">
       <app-calendar></app-calendar>
     </div>
   </div>

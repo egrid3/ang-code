@@ -3,18 +3,13 @@
   border-width: 1px;
   border-style: dashed
 }
-div#border-notes {
-  border-color: yellow;
-  border-width: 2px;
-  border-style: solid
-}
 div#border-todo {
   border-color: orange;
   border-width: 2px;
   border-style: solid
 }
-span {
-  position: absolute;
-  top: 0;
-  left: 0;
+.dash-container {
+  padding: 1rem;
+  margin: 2rem;
+  border: cyan 1px solid;
 }
