@@ -1,0 +1,24 @@
+{
+  "name": "meanapp",
+  "version": "1.0.0",
+  "description": "MEAN ToDo App with login and more to come...",
+  "main": "meanapp.js",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.2.7",
+    "mongoose": "*",
+    "nodemon": "^1.19.4",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elvin R",
+  "license": "ISC"
+}
