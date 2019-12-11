@@ -16,12 +16,12 @@ export class AuthService {
   registerUser(user) {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.httpClient.post('http://localhost:3034/users/register', user, {headers:headers});
+    return this.httpClient.post('users/register', user, {headers:headers});
   }
   authenticateUser(user) {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.httpClient.post('http://localhost:3034/users/authenticate', user, {headers:headers});
+    return this.httpClient.post('users/authenticate', user, {headers:headers});
   }
   getProfile() {
     this.loadToken();
@@ -29,7 +29,7 @@ export class AuthService {
     Authorization: this.authToken,
     'Content-Type': 'application/json'
   });
-    return this.httpClient.get('http://localhost:3034/users/profile', {headers:headers});
+    return this.httpClient.get('users/profile', {headers:headers});
   }
   storeUserData(token, user) {
     localStorage.setItem('id_token', token);
